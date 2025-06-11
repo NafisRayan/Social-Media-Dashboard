@@ -50,43 +50,20 @@ export function OverviewSection() {
       window.removeEventListener('offline', handleOffline);
     };
   }, []);
-
   // Keyboard shortcuts
-  useKeyboardShortcuts([
-    {
-      key: 'r',
-      ctrlKey: true,
-      callback: () => handleRefresh(),
-      description: 'Refresh data'
-    },
-    {
-      key: 'a',
-      ctrlKey: true,
-      shiftKey: true,
-      callback: () => setShowAddAccountModal(true),
-      description: 'Add account'
-    },
-    {
-      key: 'Escape',
-      callback: () => setShowAddAccountModal(false),
-      description: 'Close modal'
-    },
-    {
-      key: '1',
-      callback: () => setActiveTab('locations'),
-      description: 'Switch to locations tab'
-    },
-    {      key: '2',
-      callback: () => setActiveTab('age'),
-      description: 'Switch to age tab'
-    },
-    {
-      key: 'h',
-      ctrlKey: true,
-      callback: () => setShowHelpModal(true),
-      description: 'Show help'
+  useKeyboardShortcuts({
+    shortcuts: {
+      'ctrl+r': () => handleRefresh(),
+      'ctrl+shift+a': () => setShowAddAccountModal(true),
+      'escape': () => {
+        setShowAddAccountModal(false);
+        setShowHelpModal(false);
+      },
+      '1': () => setActiveTab('locations'),
+      '2': () => setActiveTab('age'),
+      'ctrl+h': () => setShowHelpModal(true)
     }
-  ]);
+  });
 
   // Animation effect for stats
   useEffect(() => {

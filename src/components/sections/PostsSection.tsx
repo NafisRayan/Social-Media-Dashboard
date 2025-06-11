@@ -96,12 +96,12 @@ const demoPosts: Post[] = [
 ];
 
 export function PostsSection() {
-  const [posts, setPosts] = useState<Post[]>(demoPosts);
+  const [posts] = useState<Post[]>(demoPosts);
 
   // Placeholder CRUD handlers
   const handleAdd = () => {};
-  const handleEdit = (id: string) => {};
-  const handleDelete = (id: string) => {};
+  const handleEdit = () => {};
+  const handleDelete = () => {};
 
   const getPlatformColor = (platform: string) => {
     const colors: Record<string, string> = {
@@ -283,13 +283,12 @@ export function PostsSection() {
                 </div>
               )}
 
-              {/* Actions */}
-              <div className="flex justify-end gap-2 pt-4 border-t">
-                <Button variant="outline" size="sm" onClick={() => handleEdit(post.id)}>
+              {/* Actions */}              <div className="flex justify-end gap-2 pt-4 border-t">
+                <Button variant="outline" size="sm" onClick={handleEdit}>
                   <Edit className="mr-2 h-4 w-4" />
                   Edit
                 </Button>
-                <Button variant="destructive" size="sm" onClick={() => handleDelete(post.id)}>
+                <Button variant="destructive" size="sm" onClick={handleDelete}>
                   <Trash2 className="mr-2 h-4 w-4" />
                   Delete
                 </Button>

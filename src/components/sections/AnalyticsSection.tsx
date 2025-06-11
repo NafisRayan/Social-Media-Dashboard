@@ -3,7 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Line, Bar, Doughnut } from "react-chartjs-2";
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Tooltip, Legend } from "chart.js";
-import { TrendingUp, Users, Eye, MessageCircle, BarChart3, Target, Globe, Clock } from "lucide-react";
+import { Eye, MessageCircle, BarChart3, Target, Globe, Clock } from "lucide-react";
 
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Tooltip, Legend);
 

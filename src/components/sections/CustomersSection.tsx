@@ -179,21 +179,21 @@ const platformData = {
 };
 
 export function CustomersSection() {
-  const [customers, setCustomers] = useState<Customer[]>(demoCustomers);
+  const [customers] = useState<Customer[]>(demoCustomers);
 
   const handleAdd = () => {
     // TODO: Add new customer functionality
   };
 
-  const handleEdit = (id: string) => {
+  const handleEdit = () => {
     // TODO: Edit customer functionality
   };
 
-  const handleDelete = (id: string) => {
+  const handleDelete = () => {
     // TODO: Delete customer functionality
   };
 
-  const handleContact = (id: string, method: "email" | "phone" | "message") => {
+  const handleContact = () => {
     // TODO: Contact customer functionality
   };
 
@@ -362,12 +362,11 @@ export function CustomersSection() {
                     <p className="text-sm text-muted-foreground italic">{customer.notes}</p>
                   )}
                 </div>
-                
-                <div className="flex flex-row lg:flex-col gap-2">
+                  <div className="flex flex-row lg:flex-col gap-2">
                   <Button 
                     variant="outline" 
                     size="icon" 
-                    onClick={() => handleContact(customer.id, "email")}
+                    onClick={handleContact}
                     title="Send Email"
                   >
                     <Mail className="h-4 w-4" />
@@ -375,7 +374,7 @@ export function CustomersSection() {
                   <Button 
                     variant="outline" 
                     size="icon" 
-                    onClick={() => handleContact(customer.id, "phone")}
+                    onClick={handleContact}
                     title="Call"
                   >
                     <Phone className="h-4 w-4" />
@@ -383,7 +382,7 @@ export function CustomersSection() {
                   <Button 
                     variant="outline" 
                     size="icon" 
-                    onClick={() => handleContact(customer.id, "message")}
+                    onClick={handleContact}
                     title="Send Message"
                   >
                     <MessageSquare className="h-4 w-4" />
@@ -391,7 +390,7 @@ export function CustomersSection() {
                   <Button 
                     variant="outline" 
                     size="icon" 
-                    onClick={() => handleEdit(customer.id)}
+                    onClick={handleEdit}
                     title="Edit"
                   >
                     <Edit className="h-4 w-4" />
@@ -399,7 +398,7 @@ export function CustomersSection() {
                   <Button 
                     variant="destructive" 
                     size="icon" 
-                    onClick={() => handleDelete(customer.id)}
+                    onClick={handleDelete}
                     title="Delete"
                   >
                     <Trash2 className="h-4 w-4" />

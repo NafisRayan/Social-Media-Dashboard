@@ -24,7 +24,7 @@ export function EngagementSection() {
             </CardHeader>
             <CardContent>
               <div>
-                <span className="font-semibold">{e.user}</span> {e.type.toLowerCase()}d on post: <span className="italic">"{e.post}"</span>
+                <span className="font-semibold">{e.user}</span> {e.type.toLowerCase()}d on post: <span className="italic">&quot;{e.post}&quot;</span>
               </div>
             </CardContent>
           </Card>

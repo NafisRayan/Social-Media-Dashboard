@@ -163,17 +163,17 @@ const performanceOptions = {
 };
 
 export function CampaignsSection() {
-  const [campaigns, setCampaigns] = useState<Campaign[]>(demoCampaigns);
+  const [campaigns] = useState<Campaign[]>(demoCampaigns);
 
   const handleAdd = () => {
     // TODO: Add new campaign functionality
   };
 
-  const handleEdit = (id: string) => {
+  const handleEdit = () => {
     // TODO: Edit campaign functionality
   };
 
-  const handleDelete = (id: string) => {
+  const handleDelete = () => {
     // TODO: Delete campaign functionality
   };
 
@@ -327,12 +327,11 @@ export function CampaignsSection() {
                     <div>Conversions: {campaign.conversions}</div>
                     <div>ROAS: {campaign.roas}x</div>
                   </div>
-                </div>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="icon" onClick={() => handleEdit(campaign.id)}>
+                </div>                <div className="flex gap-2">
+                  <Button variant="outline" size="icon" onClick={handleEdit}>
                     <Edit className="h-4 w-4" />
                   </Button>
-                  <Button variant="destructive" size="icon" onClick={() => handleDelete(campaign.id)}>
+                  <Button variant="destructive" size="icon" onClick={handleDelete}>
                     <Trash2 className="h-4 w-4" />
                   </Button>
                 </div>

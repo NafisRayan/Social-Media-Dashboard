@@ -21,12 +21,12 @@ const demoUsers: User[] = [
 ];
 
 export function UsersSection() {
-  const [users, setUsers] = useState<User[]>(demoUsers);
+  const [users] = useState<User[]>(demoUsers);
 
   // Placeholder CRUD handlers
   const handleAdd = () => {};
-  const handleEdit = (id: string) => {};
-  const handleDelete = (id: string) => {};
+  const handleEdit = () => {};
+  const handleDelete = () => {};
 
   return (
     <div>
@@ -57,13 +57,12 @@ export function UsersSection() {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="flex items-center justify-between">
-                <span>{user.email}</span>
+              <div className="flex items-center justify-between">                <span>{user.email}</span>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="icon" onClick={() => handleEdit(user.id)}>
+                  <Button variant="outline" size="icon" onClick={handleEdit}>
                     <Edit className="h-4 w-4" />
                   </Button>
-                  <Button variant="destructive" size="icon" onClick={() => handleDelete(user.id)}>
+                  <Button variant="destructive" size="icon" onClick={handleDelete}>
                     <Trash2 className="h-4 w-4" />
                   </Button>
                 </div>
