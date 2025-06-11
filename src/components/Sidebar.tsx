@@ -1,12 +1,12 @@
 "use client";
 
-import { Home, Calendar, BarChart2, Users, MessageCircle, Settings, UserCheck, Target, X, Menu } from "lucide-react";
+import { Home, Calendar, BarChart2, Users, MessageCircle, Settings, UserCheck, Target, X, Eye } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 const navItems = [
   { key: "dashboard", label: "Dashboard", icon: Home },
+  { key: "overview", label: "Overview", icon: Eye },
   { key: "posts", label: "Posts", icon: Calendar },
   { key: "analytics", label: "Analytics", icon: BarChart2 },
   { key: "engagement", label: "Engagement", icon: MessageCircle },

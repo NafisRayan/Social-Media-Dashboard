@@ -129,9 +129,9 @@ export function PostsSection() {
   const draftPosts = posts.filter(p => p.status === "draft").length;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4">
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <h2 className="text-2xl font-bold">Content Management</h2>
+        <h2 className="text-xl font-bold">Content Management</h2>
         <Button onClick={handleAdd} className="w-full sm:w-auto">
           <Plus className="mr-2 h-4 w-4" />
           Create Post
@@ -139,7 +139,7 @@ export function PostsSection() {
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium">Total Posts</CardTitle>

@@ -1,6 +1,7 @@
 "use client";
 
 import { DashboardSection } from "./sections/DashboardSection";
+import { OverviewSection } from "./sections/OverviewSection";
 import { PostsSection } from "./sections/PostsSection";
 import { AnalyticsSection } from "./sections/AnalyticsSection";
 import { EngagementSection } from "./sections/EngagementSection";
@@ -11,6 +12,8 @@ import { SettingsSection } from "./sections/SettingsSection";
 
 export function DashboardHome({ section }: { section: string }) {
   switch (section) {
+    case "overview":
+      return <OverviewSection />;
     case "posts":
       return <PostsSection />;
     case "analytics":

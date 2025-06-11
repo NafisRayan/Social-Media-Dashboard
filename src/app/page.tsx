@@ -22,8 +22,8 @@ export default function Home() {
         onClose={() => setSidebarOpen(false)}
       />
       <main className="flex-1 flex flex-col lg:ml-0 min-w-0">
-        <header className="flex items-center justify-between px-4 sm:px-6 py-4 border-b bg-card">
-          <div className="flex items-center gap-4">
+        <header className="sticky top-0 z-30 flex items-center justify-between px-4 sm:px-6 py-3 border-b bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
+          <div className="flex items-center gap-3">
             <Button
               variant="ghost"
               size="icon"
@@ -32,11 +32,21 @@ export default function Home() {
             >
               <Menu className="h-5 w-5" />
             </Button>
-            <h1 className="text-xl sm:text-2xl font-bold truncate">Social Media Dashboard</h1>
+            <div>
+              <h1 className="text-lg sm:text-xl font-bold truncate">Social Media Dashboard</h1>
+              <p className="text-xs text-muted-foreground capitalize">
+                {selectedSection === "dashboard" ? "Dashboard" : selectedSection === "overview" ? "Overview" : selectedSection}
+              </p>
+            </div>
           </div>
-          <ThemeToggler />
+          <div className="flex items-center gap-2">
+            <div className="hidden sm:flex items-center gap-2 text-sm text-muted-foreground">
+              <span>Last updated: just now</span>
+            </div>
+            <ThemeToggler />
+          </div>
         </header>
-        <section className="flex-1 overflow-y-auto p-4 sm:p-6">
+        <section className="flex-1 overflow-y-auto p-3 sm:p-4 lg:p-6 bg-muted/30">
           <DashboardHome section={selectedSection} />
         </section>
       </main>
