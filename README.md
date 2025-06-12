@@ -6,9 +6,9 @@ A comprehensive, responsive social media analytics platform built with Next.js, 
 
 ## Preview
 
-<img src="./public/demo.png" alt="Fintech Mobile App Preview" width="300" />
+<img src="./public/demo.png" alt="Fintech Mobile App Preview" width="600" />
 
-This is a preview of the Fintech application interface, showcasing key screens such as the dashboard, transaction view, and authentication flow.
+This is a preview of the application interface.
 
 
 ## ✨ Features
