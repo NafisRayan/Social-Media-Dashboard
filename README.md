@@ -4,6 +4,13 @@ A comprehensive, responsive social media analytics platform built with Next.js, 
 
 ![Dashboard Preview](https://img.shields.io/badge/Status-Production%20Ready-brightgreen) ![Next.js](https://img.shields.io/badge/Next.js-15.3.3-black) ![React](https://img.shields.io/badge/React-19.0.0-blue) ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)
 
+## Preview
+
+<img src="./public/demo.png" alt="Fintech Mobile App Preview" width="300" />
+
+This is a preview of the Fintech application interface, showcasing key screens such as the dashboard, transaction view, and authentication flow.
+
+
 ## ✨ Features
 
 ### 📊 **Core Dashboard Components**
